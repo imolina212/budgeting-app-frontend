@@ -2,11 +2,11 @@
 import { Link  } from "react-router-dom"
 import { Button, Container , Stack} from "react-bootstrap"
 
-export default function NavBar({ amount, max }) {
+export default function NavBar() {
     return(
         <Container className="my-4">
             <Stack direction="horizontal" gap="2" className="mb-5">
-                <Link to="/transactions/budget">
+                <Link to="/transactions/budget" style={{textDecoration: "none",}}>
                     <h1 className="me-auto">Budget App</h1>
                 </Link>
                 <Link to="/transactions/new">
