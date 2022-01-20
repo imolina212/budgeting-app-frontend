@@ -15,7 +15,21 @@ export default function Transactions() {
     }, [])
 
     return(
-        <div> 
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {transactions.map((transaction, index) => {
+                        return <Transaction key={index} transaction={transaction} index={index} />
+                    })}
+                </tbody>
+            </table>   
         </div>
     )
 }
