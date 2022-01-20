@@ -4,9 +4,9 @@ export default function Transaction({transaction, id}) {
     return(
         <tr>
             <td>{transaction.date}</td>
-            <Link to={`/transactions/${id}`} style={{textDecoration: "none"}}>
-                <td>{transaction.name}</td>
-            </Link>
+            <td>
+                <Link to={`/transactions/${id}`}>{transaction.name}</Link>
+            </td>
             <td>{transaction.amount}</td>
         </tr>
     );
