@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 
-export default function Transaction({transaction, id}) {
+export default function Transaction({transaction, index}) {
     return(
         <tr>
             <td>{transaction.date}</td>
             <td>
-                <Link to={`/transactions/${id}`}>{transaction.name}</Link>
+                <Link to={`/transactions/${index}`}>{transaction.name}</Link>
             </td>
             <td>{transaction.amount}</td>
         </tr>
