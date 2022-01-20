@@ -1,7 +1,9 @@
+import { Container } from "react-bootstrap"
+
 export default function New() {
     return (
-        <div>
+        <Container>
             <h1>New</h1>
-        </div>
+        </Container>
     );
 }
