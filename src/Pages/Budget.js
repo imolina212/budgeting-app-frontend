@@ -6,7 +6,7 @@ export default function Budget() {
     return(
         <Container>
             <Stack direction="horizontal" gap="2" className="mb-4">
-                <h2 className="me-auto">Index</h2>
+                <h2 className="me-auto">Budget</h2>
             </Stack>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", alignItems: "flex-start" }}>
                 <BudgetCard name="Food" amount={0} max={100}></BudgetCard>
