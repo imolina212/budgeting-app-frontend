@@ -16,7 +16,7 @@ export default function Transactions() {
 
     return(
         <div>
-            <table>
+            <table className="table">
                 <thead>
                     <tr>
                         <th>Date</th>
