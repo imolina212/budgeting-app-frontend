@@ -12,7 +12,7 @@ export default function TransactionDetails() {
         axios
             .get(`${process.env.REACT_APP_API_URL}/transactions/${id}`)
             .then((response) => setTransaction(response.data));
-    }, []);
+    }, [id]);
     
     return (
         <div class="card">
