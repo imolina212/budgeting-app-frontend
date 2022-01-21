@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { Stack } from "react-bootstrap"
+import { useNavigate, useParams , Link } from "react-router-dom";
+import { Stack, Button } from "react-bootstrap"
 
 export default function NewForm() {
   let { id } = useParams();
+  const navigate = useNavigate();
 
   const [transaction, setTransaction] = useState({
     amount: 0,
@@ -26,6 +27,19 @@ export default function NewForm() {
     setTransaction({...transaction, [event.target.id]: event.target.value})
   }
   
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios.put(`${process.env.REACT_APP_API_URL}/transactions/${id}`, transaction)
+      .then(() => { navigate(`/transactions/${id}`)})
+  }
+
+  const handleDelete = () => {
+    axios.delete(`${process.env.REACT_APP_API_URL}/transactions/${id}`)
+      .then((response) => {
+        navigate("/transactions")
+      })
+  } 
+
   return(
     <form className="my-5">
       <Stack direction="vertical" gap="2">
@@ -63,7 +77,7 @@ export default function NewForm() {
             placeholder="Enter Transaction Name Here"
             required
           />
-          <select class="form-select" name="category">
+          <select className="form-select" name="category">
             <option selected>Select a Category</option>
             <option value="Entertainment">Entertainment</option>
             <option value="Transportation">Transportation</option>
@@ -78,7 +92,15 @@ export default function NewForm() {
           </select>
           <textarea class="form-control rounded-0" id="" rows="3" placeholder="Description (optional)"></textarea>
       </Stack>
-      <button className="btn btn-warning my-4">Submit</button>
+      <Stack direction="horizontal" className="my-5" gap="3">
+        <Link to={`${process.env.REACT_APP_API_URL}/transactions/${id}`}>
+          <Button variant="outline-primary" className="ms-2">Cancel</Button>
+        </Link>
+        <div className="vr"></div>
+        <Button onClick={handleDelete} variant="outline-danger">Delete</Button>
+        <div className="vr"></div>
+        <Button onClick={handleSubmit}>Done</Button>
+      </Stack>
     </form>
   )
 }
