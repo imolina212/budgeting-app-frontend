@@ -24,6 +24,7 @@ export default function TransactionDetails() {
                 <p class="card-text">Category({transaction.category})</p>
                 <Stack direction="horizontal" gap="3">
                     <Button>Back</Button>
+                    <div class="vr"></div>
                     <Button>Edit</Button>
                 </Stack>
             </div>
