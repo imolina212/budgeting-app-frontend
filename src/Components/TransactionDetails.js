@@ -15,20 +15,20 @@ export default function TransactionDetails() {
     }, [id]);
     
     return (
-        <div class="card">
-            <div class="card-header"><span class="fw-bold">From: {transaction.from}</span></div>
-            <div class="card-body">
-                <h5 class="card-title mb-4">{transaction.name}</h5>
-                <p class="card-text">Description: {transaction.description}</p>
-                <p class="card-text">Amount: {transaction.amount}</p>
-                <p class="card-text">Category({transaction.category})</p>
+        <div className="card">
+            <div className="card-header"><span className="fw-bold">From: {transaction.from}</span></div>
+            <div className="card-body">
+                <h5 className="card-title mb-4">{transaction.name}</h5>
+                <p className="card-text">Description: {transaction.description}</p>
+                <p className="card-text">Amount: {transaction.amount}</p>
+                <p className="card-text">Category({transaction.category})</p>
                 <Stack className="mt-5" direction="horizontal" gap="3">
                     <Link to="/transactions">
-                        <Button variant="outline-primary">Back</Button>
+                        <Button variant="primary">Back</Button>
                     </Link>
-                    <div class="vr"></div>
-                    <Button variant="outline-secondary">Edit</Button>
-                    <div class="vr"></div>
+                    <div className="vr"></div>
+                    <Button variant="outline-primary">Edit</Button>
+                    <div className="vr"></div>
                     <Button variant="outline-danger">Delete</Button>
                 </Stack>
             </div>
