@@ -14,6 +14,15 @@ export default function TransactionDetails() {
     }, []);
     
     return (
-        <></>
+        <div class="card">
+            <div class="card-header"><span class="fw-bold">From: {transaction.from}</span></div>
+            <div class="card-body">
+                <h5 class="card-title mb-4">{transaction.name}</h5>
+                <p class="card-text">Description: {transaction.description}</p>
+                <p class="card-text">Amount: {transaction.amount}</p>
+                <p class="card-text">Category({transaction.category})</p>
+                <a href="#" class="btn btn-primary">Edit</a>
+            </div>
+        </div>
     )
 }
