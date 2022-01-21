@@ -9,6 +9,7 @@ import Index from "./Pages/Index"
 import New from "./Pages/New"
 import Budget from "./Pages/Budget"
 import Show from "./Pages/Show"
+import Edit from "./Pages/Edit"
 
 export default function App() {
   return(
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/transactions/new" element={<New />}/>
         <Route path="/transactions/budget" element={<Budget />}/>
         <Route path="/transactions/:id" element={<Show />}/>
+        <Route path="/transactions/edit/:id" element={<Edit />}/>
       </Routes>
     </div>
   )

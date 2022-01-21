@@ -22,12 +22,14 @@ export default function TransactionDetails() {
                 <p class="card-text">Description: {transaction.description}</p>
                 <p class="card-text">Amount: {transaction.amount}</p>
                 <p class="card-text">Category({transaction.category})</p>
-                <Stack direction="horizontal" gap="3">
+                <Stack className="mt-5" direction="horizontal" gap="3">
                     <Link to="/transactions">
-                        <Button>Back</Button>
+                        <Button variant="outline-primary">Back</Button>
                     </Link>
                     <div class="vr"></div>
-                    <Button>Edit</Button>
+                    <Button variant="outline-secondary">Edit</Button>
+                    <div class="vr"></div>
+                    <Button variant="outline-danger">Delete</Button>
                 </Stack>
             </div>
         </div>
