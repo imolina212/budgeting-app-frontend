@@ -24,6 +24,12 @@ export default function NewForm() {
   return(
     <form>
       <Stack>
+      <input
+          id=""
+          value={transaction.date}
+          type="text"
+          placeholder="Enter Date Here"
+        />
         <input
           id=""
           value={transaction.from}
