@@ -1,16 +1,18 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { Stack } from "react-bootstrap"
+import { useNavigate, useParams } from "react-router-dom";
+import { Stack , Button } from "react-bootstrap"
 
 export default function NewForm() {
   let { id } = useParams();
+  const navigate = useNavigate();
 
   const [transaction, setTransaction] = useState({
-    date: "",
-    name: "",
     amount: 0,
+    date: "",
     from: "",
+    name: "",
+    description: "",
   })
 
   useEffect(() => {
@@ -23,6 +25,13 @@ export default function NewForm() {
 
   const handleInput = (event) => {
     setTransaction({...transaction, [event.target.id]: event.target.value})
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios.post(`${process.env.REACT_APP_API_URL}/transactions/`, transaction)
+      .then(()=> { navigate(`/transactions`)})
+
   }
   
   return(
@@ -77,7 +86,7 @@ export default function NewForm() {
           </select>
           <textarea class="form-control rounded-0" id="" rows="3" placeholder="Description (optional)"></textarea>
       </Stack>
-      <div className="btn btn-primary my-4">Submit</div>
+      <Button className="my-4" Click={handleSubmit}>Submit</Button>
     </form>
   )
 }

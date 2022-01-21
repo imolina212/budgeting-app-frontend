@@ -4,7 +4,7 @@ import NewForm from "../Components/NewForm";
 export default function New() {
     return (
         <Container>
-            <h1>New</h1>
+            <h3>New Transaction Form</h3>
             <NewForm />
         </Container>
     );
