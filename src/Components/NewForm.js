@@ -47,6 +47,7 @@ export default function NewForm() {
         type="text"
         placeholder="Enter Amount Here"/>
       </Stack>
+      <div class="btn btn-primary my-4">Submit</div>
     </form>
   )
 }
