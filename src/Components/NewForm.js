@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Stack } from "react-bootstrap"
 
 export default function NewForm() {
   let { id } = useParams();
@@ -21,6 +22,31 @@ export default function NewForm() {
   }, [])
   
   return(
-    <form></form>
+    <form>
+      <Stack>
+        <input
+          id=""
+          value={transaction.from}
+          type="text"
+          placeholder="Input Sender Here"
+        />
+        <input
+          id=""
+          value={transaction.name}
+          type="text"
+          placeholder="Enter Transaction Name Here"
+        />
+        <input 
+        id=""
+        value={transaction.category}
+        type="text"
+        placeholder="Enter Category Here"/>
+        <input 
+        id=""
+        value={transaction.amount}
+        type="text"
+        placeholder="Enter Amount Here"/>
+      </Stack>
+    </form>
   )
 }
