@@ -19,41 +19,65 @@ export default function NewForm() {
         setTransaction(response.data)
     })
     .catch((err) => console.log('catch', err))
-  }, [])
+  }, [id])
+
+  const handleInput = (event) => {
+    setTransaction({...transaction, [event.target.id]: event.target.value})
+  }
   
   return(
-    <form>
-      <Stack>
-      <input
-          id=""
-          value={transaction.date}
-          type="text"
-          placeholder="Enter Date Here"
-        />
-        <input
-          id=""
-          value={transaction.from}
-          type="text"
-          placeholder="Input Sender Here"
-        />
-        <input
-          id=""
-          value={transaction.name}
-          type="text"
-          placeholder="Enter Transaction Name Here"
-        />
-        <input 
-        id=""
-        value={transaction.category}
-        type="text"
-        placeholder="Enter Category Here"/>
-        <input 
-        id=""
-        value={transaction.amount}
-        type="text"
-        placeholder="Enter Amount Here"/>
+    <form className="my-5">
+      <Stack direction="vertical" gap="2">
+          <label>Choose amount:</label>
+          <input 
+          id="amount"
+          value={transaction.amount}
+          onChange={handleInput}
+          type="number"
+          placeholder="Enter Amount Here"
+          required
+          />
+          <input
+            id="date"
+            value={transaction.date}
+            type="text"
+            onChange={handleInput}
+            placeholder="Enter Date Here"
+            required
+          />
+          <input
+            id="from"
+            value={transaction.from}
+            type="text"
+            onChange={handleInput}
+            placeholder="Input Sender Here"
+            required
+          />
+          <input
+            id="name"
+            class="mb-2"
+            value={transaction.name}
+            type="text"
+            onChange={handleInput}
+            placeholder="Enter Transaction Name Here"
+            required
+          />
+          <select class="form-select" name="category">
+            <option selected>Select a Category</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Savings">Savings</option>
+            <option value="Debt">Debt</option>
+            <option value="Food">Food</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Pet Care">Pet Care</option>
+            <option value="Housing">Housing</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+          </select>
+          <textarea class="form-control rounded-0" id="" rows="3" placeholder="Description (optional)"></textarea>
       </Stack>
-      <div class="btn btn-primary my-4">Submit</div>
+      <div className="btn btn-primary my-4">Submit</div>
     </form>
   )
 }
