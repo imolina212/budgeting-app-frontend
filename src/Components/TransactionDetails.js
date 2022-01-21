@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom";
+import { useParams , Link } from "react-router-dom";
 import { Button, Stack } from "react-bootstrap"
 
 
@@ -23,7 +23,9 @@ export default function TransactionDetails() {
                 <p class="card-text">Amount: {transaction.amount}</p>
                 <p class="card-text">Category({transaction.category})</p>
                 <Stack direction="horizontal" gap="3">
-                    <Button>Back</Button>
+                    <Link to="/transactions">
+                        <Button>Back</Button>
+                    </Link>
                     <div class="vr"></div>
                     <Button>Edit</Button>
                 </Stack>
