@@ -15,7 +15,7 @@ export default function ShowCase() {
             </div>
         </section>
         <section>
-            <div className="container-fluid">
+            <div className="container-fluid m-3">
                 <div className="row text-center">
                     <div className="col-sm">
                         <div className="card bg-light">
@@ -35,7 +35,7 @@ export default function ShowCase() {
                         <div className="card bg-light">
                             <div className="card-body text-center">
                                 <div className="h1 mb-3">
-                                    <i className="bi bi-laptop"></i>
+                                    <i className="bi bi-book"></i>
                                 </div>
                                 <h3 className="card-title">
                                     About us
@@ -49,7 +49,7 @@ export default function ShowCase() {
                         <div className="card bg-light">
                             <div className="card-body text-center">
                                 <div className="h1 mb-3">
-                                    <i className="bi bi-laptop"></i>
+                                    <i className="bi bi-headset"></i>
                                 </div>
                                 <h3 className="card-title">
                                     Need Help?
