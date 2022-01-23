@@ -1,9 +1,9 @@
-import { Container } from "react-bootstrap"
+import ShowCase from "../Components/ShowCase"
 
 export default function Home() {
     return(
-        <Container className="my-5">
-            <h1>Home</h1>
-        </Container>
+        <div>
+            <ShowCase />
+        </div>
     )
 }
