@@ -93,13 +93,13 @@ export default function NewForm() {
           <textarea class="form-control rounded-0" id="" rows="3" placeholder="Description (optional)"></textarea>
       </Stack>
       <Stack direction="horizontal" className="my-5" gap="3">
-        <Link to={`${process.env.REACT_APP_API_URL}/transactions/${id}`}>
-          <Button variant="outline-primary" className="ms-2">Cancel</Button>
+        <Link to={`/transactions/${id}`}>
+          <Button variant="primary" className="ms-2">Cancel</Button>
         </Link>
         <div className="vr"></div>
         <Button onClick={handleDelete} variant="outline-danger">Delete</Button>
         <div className="vr"></div>
-        <Button onClick={handleSubmit}>Done</Button>
+        <Button onClick={handleSubmit} variant="outline-primary">Done</Button>
       </Stack>
     </form>
   )
