@@ -1,21 +1,33 @@
 //Dependencies
 import { Link  } from "react-router-dom"
-import { Button, Container , Stack} from "react-bootstrap"
 
 export default function NavBar() {
     return(
-        <Container className="my-4">
-            <Stack direction="horizontal" gap="2" className="mb-5">
-                <Link to="/transactions/budget"  className="me-auto" style={{textDecoration: "none",}}>
-                    <h1>Budget App</h1>
-                </Link>
-                <Link to="/transactions/new">
-                    <Button variant="outline-primary">New Transaction</Button>
-                </Link>
-                <Link to="/transactions">
-                    <Button variant="primary">View Transactions</Button>  
-                </Link>
-            </Stack> 
-        </Container>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="container">
+                <a href="#" className="navbar-brand">Budget App</a>
+                <button 
+                    className="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarMenu"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarMenu">
+                    <ul className="navbar-nav ms-auto">
+                        <li className="nav-item">
+                            <a href="#overview" className="nav-link">Overview</a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="#newform" className="nav-link">New Transaction</a>
+                        </li>
+                        <li className="nav-item">
+                            <a href="#transactions" className="nav-link">View Transactions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     )
 }
