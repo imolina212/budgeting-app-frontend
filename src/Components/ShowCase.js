@@ -2,16 +2,40 @@ import make_it_rain from "../make_it_rain.svg"
 
 export default function ShowCase() {
     return (
+        <>
         <section className="bg-light text-dark p-5 text-center">
             <div className="container">
-                <div className="d-flex">
+                <div className="d-flex align-items-center justify-content-between">
                     <div>
                         <h1>Manage Your Finances<span className="text-success"> Efficiently</span></h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere, maecenas proin aliquam viverra bibendum enim vestibulum. Litora dis libero accumsan ac id nec suspendisse habitasse fames, aenean hendrerit nullam bibendum sem cubilia nostra.</p>
+                        <p className="my-4">Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere, maecenas proin aliquam viverra bibendum enim vestibulum.</p>
                     </div>
+                    <img className="img-fluid w-50 mx-2" src={make_it_rain} alt=""/>
                 </div>
-                <img className="img-fluid" src={make_it_rain} alt=""/>
             </div>
         </section>
+        <section>
+            <div className="container">
+                <div className="row text-center">
+                    <div className="col-sm">
+                        <div className="card bg-light">
+                            <div className="card-body text-center">
+                                <div className="h1 mb-3">
+                                    <i className="bi bi-laptop"></i>
+                                </div>
+                                <h3 className="card-title">
+                                    Join
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere</p>
+                                <button>Sign up</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm">test</div>
+                    <div className="col-sm">test</div>
+                </div>
+            </div>
+        </section>
+        </>
     )
 }
