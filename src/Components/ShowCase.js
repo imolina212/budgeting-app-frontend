@@ -15,7 +15,7 @@ export default function ShowCase() {
             </div>
         </section>
         <section>
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row text-center">
                     <div className="col-sm">
                         <div className="card bg-light">
@@ -27,12 +27,38 @@ export default function ShowCase() {
                                     Join
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere</p>
-                                <button>Sign up</button>
+                                <a className="btn-sm btn-primary" style={{textDecoration: 'none'}}>Sign up</a>
                             </div>
                         </div>
                     </div>
-                    <div className="col-sm">test</div>
-                    <div className="col-sm">test</div>
+                    <div className="col-sm">
+                        <div className="card bg-light">
+                            <div className="card-body text-center">
+                                <div className="h1 mb-3">
+                                    <i className="bi bi-laptop"></i>
+                                </div>
+                                <h3 className="card-title">
+                                    About us
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere</p>
+                                <a className="btn-sm btn-primary" style={{textDecoration: 'none'}}>Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm">
+                        <div className="card bg-light">
+                            <div className="card-body text-center">
+                                <div className="h1 mb-3">
+                                    <i className="bi bi-laptop"></i>
+                                </div>
+                                <h3 className="card-title">
+                                    Need Help?
+                                </h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere</p>
+                                <a className="btn-sm btn-primary" style={{textDecoration: 'none'}}>Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
