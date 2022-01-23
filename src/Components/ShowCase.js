@@ -1,4 +1,5 @@
 import make_it_rain from "../make_it_rain.svg"
+import to_the_moon from "../to_the_moon.svg"
 
 export default function ShowCase() {
     return (
@@ -11,6 +12,17 @@ export default function ShowCase() {
                         <p className="my-4">Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere, maecenas proin aliquam viverra bibendum enim vestibulum.</p>
                     </div>
                     <img className="img-fluid w-50 mx-2" src={make_it_rain} alt=""/>
+                </div>
+            </div>
+        </section>
+        <section className="bg-light text-dark p-5 text-center">
+            <div className="container">
+                <div className="d-flex align-items-center justify-content-between">
+                    <img className="img-fluid w-50 mx-2" src={to_the_moon} alt=""/>
+                    <div>
+                        <h1>See Your Money grow 🚀</h1>
+                        <p className="my-4">Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere, maecenas proin aliquam viverra bibendum enim vestibulum.</p>
+                    </div>
                 </div>
             </div>
         </section>
