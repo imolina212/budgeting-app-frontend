@@ -4,7 +4,7 @@ import BudgetCard from "../Components/BudgetCard"
 
 export default function Budget() {
     return(
-        <Container>
+        <Container className="my-5">
             <Stack direction="horizontal" gap="2" className="mb-4">
                 <h2 className="me-auto">Budget</h2>
             </Stack>
