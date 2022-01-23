@@ -3,9 +3,11 @@ import { Link  } from "react-router-dom"
 
 export default function NavBar() {
     return(
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
             <div className="container">
-                <a href="#" className="navbar-brand">Budget App</a>
+                <Link to="/" style={{textDecoration: 'none'}}>
+                    <a href="#" className="navbar-brand text-primary">Budget App</a>
+                </Link>
                 <button 
                     className="navbar-toggler" 
                     type="button" 
@@ -29,6 +31,11 @@ export default function NavBar() {
                         <li className="nav-item">
                             <Link to='/transactions'>
                                 <a href="#transactions" className="nav-link">View Transactions</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to='/transactions/budget'>
+                                <a href="#transactions" className="nav-link">View Budgets</a>
                             </Link>
                         </li>
                     </ul>
