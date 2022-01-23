@@ -17,13 +17,19 @@ export default function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarMenu">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a href="#overview" className="nav-link">Overview</a>
+                            <Link to='/'>
+                                <a href="#overview" className="nav-link">Overview</a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#newform" className="nav-link">New Transaction</a>
+                            <Link to='/transactions/new'>
+                                <a href="#newform" className="nav-link">New Transaction</a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#transactions" className="nav-link">View Transactions</a>
+                            <Link to='/transactions'>
+                                <a href="#transactions" className="nav-link">View Transactions</a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
