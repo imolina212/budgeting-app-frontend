@@ -3,7 +3,7 @@ import TransactionDetails from "../Components/TransactionDetails"
 
 export default function Show() {
     return(
-        <Container>
+        <Container className="my-5">
             <TransactionDetails />
         </Container>
     )

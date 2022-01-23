@@ -3,7 +3,7 @@ import EditForm from "../Components/EditForm";
 
 export default function Edit() {
     return (
-        <Container>
+        <Container className="my-5">
             <h3>Edit Transaction</h3>
             <EditForm />
         </Container>

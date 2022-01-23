@@ -3,7 +3,7 @@ import NewForm from "../Components/NewForm";
 
 export default function New() {
     return (
-        <Container>
+        <Container className="my-5">
             <h3>New Transaction Form</h3>
             <NewForm />
         </Container>

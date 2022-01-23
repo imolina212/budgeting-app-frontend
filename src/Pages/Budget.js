@@ -9,7 +9,7 @@ export default function Budget() {
                 <h2 className="me-auto">Budget</h2>
             </Stack>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", alignItems: "flex-start" }}>
-                <BudgetCard name="Food" amount={0} max={100}></BudgetCard>
+                <BudgetCard name="Food" amount={75} max={100}></BudgetCard>
             </div>
         </Container>
     );

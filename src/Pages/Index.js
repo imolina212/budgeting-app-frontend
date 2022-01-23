@@ -3,7 +3,7 @@ import Transactions from "../Components/Transactions";
 
 export default function Index() {
     return(
-        <Container>
+        <Container className="my-5">
             <Transactions />
         </Container>
     )
