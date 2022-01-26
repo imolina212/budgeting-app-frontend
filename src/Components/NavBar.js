@@ -5,9 +5,7 @@ export default function NavBar() {
     return(
         <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
             <div className="container">
-                <Link to="/" style={{textDecoration: 'none'}}>
-                    <a href="#" className="navbar-brand text-primary">Budget App</a>
-                </Link>
+                <Link to="/" className="navbar-brand text-primary" style={{textDecoration: 'none'}}>Budget App</Link>
                 <button 
                     className="navbar-toggler" 
                     type="button" 
@@ -19,23 +17,23 @@ export default function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarMenu">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link to='/' style={{textDecoration: 'none'}}>
-                                <a href="#overview" className="nav-link">Overview</a>
+                            <Link to='/' className="nav-link" style={{textDecoration: 'none'}}>
+                                Overview
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/transactions/new' style={{textDecoration: 'none'}}>
-                                <a href="#newform" className="nav-link">New Transaction</a>
+                            <Link to='/transactions/new' className="nav-link" style={{textDecoration: 'none'}}>
+                                New Transaction
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/transactions' style={{textDecoration: 'none'}}>
-                                <a href="#transactions" className="nav-link">View Transactions</a>
+                            <Link to='/transactions' className="nav-link" style={{textDecoration: 'none'}}>
+                                View Transactions
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/transactions/budget' style={{textDecoration: 'none'}}>
-                                <a href="#transactions" className="nav-link">View Budgets</a>
+                            <Link to='/transactions/budget' className="nav-link" style={{textDecoration: 'none'}}>
+                                View Budgets
                             </Link>
                         </li>
                     </ul>

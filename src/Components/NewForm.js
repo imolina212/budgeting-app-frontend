@@ -37,7 +37,7 @@ export default function NewForm() {
   return(
     <form className="my-5">
       <Stack direction="vertical" gap="2">
-          <label>Choose amount:</label>
+          <label>Amount</label>
           <input 
           id="amount"
           value={transaction.amount}
@@ -46,6 +46,7 @@ export default function NewForm() {
           placeholder="Enter Amount Here"
           required
           />
+          <label>Date</label>
           <input
             id="date"
             value={transaction.date}
@@ -54,6 +55,7 @@ export default function NewForm() {
             placeholder="Enter Date Here"
             required
           />
+          <label>From</label>
           <input
             id="from"
             value={transaction.from}
@@ -62,16 +64,17 @@ export default function NewForm() {
             placeholder="Input Sender Here"
             required
           />
+          <label>Name</label>
           <input
             id="name"
-            class="mb-2"
+            className="mb-2"
             value={transaction.name}
             type="text"
             onChange={handleInput}
             placeholder="Enter Transaction Name Here"
             required
           />
-          <select class="form-select" name="category">
+          <select className="form-select my-2" name="category">
             <option selected>Select a Category</option>
             <option value="Entertainment">Entertainment</option>
             <option value="Transportation">Transportation</option>
@@ -84,9 +87,9 @@ export default function NewForm() {
             <option value="Healthcare">Healthcare</option>
             <option value="Miscellaneous">Miscellaneous</option>
           </select>
-          <textarea class="form-control rounded-0" id="" rows="3" placeholder="Description (optional)"></textarea>
+          <textarea className="form-control rounded-0" id="" rows="3" placeholder="Description (optional)"></textarea>
       </Stack>
-      <Button className="my-4" Click={handleSubmit}>Submit</Button>
+      <Button className="my-4" onClick={handleSubmit}>Submit</Button>
     </form>
   )
 }

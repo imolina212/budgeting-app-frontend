@@ -15,21 +15,21 @@ export default function ShowCase() {
                 </div>
             </div>
         </section>
-        <section className="bg-light text-dark p-5 text-center">
+        <section className="bg-light text-dark p-5 mb-5 text-center">
             <div className="container">
                 <div className="d-flex align-items-center justify-content-between">
                     <img className="img-fluid w-50 mx-2" src={to_the_moon} alt=""/>
                     <div>
-                        <h1>See Your Money grow 🚀</h1>
+                        <h1>See Your Money Grow 🚀</h1>
                         <p className="my-4">Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere, maecenas proin aliquam viverra bibendum enim vestibulum.</p>
                     </div>
                 </div>
             </div>
         </section>
         <section>
-            <div className="container-fluid m-3">
+            <div className="container-fluid mb-5">
                 <div className="row text-center">
-                    <div className="col-sm">
+                    <div className="col-sm my-5">
                         <div className="card bg-light">
                             <div className="card-body text-center">
                                 <div className="h1 mb-3">
@@ -39,11 +39,11 @@ export default function ShowCase() {
                                     Join
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere</p>
-                                <a className="btn-sm btn-primary" style={{textDecoration: 'none'}}>Sign up</a>
+                                <button className="btn-sm btn-primary" style={{textDecoration: 'none'}}>Sign up</button>
                             </div>
                         </div>
                     </div>
-                    <div className="col-sm">
+                    <div className="col-sm my-5">
                         <div className="card bg-light">
                             <div className="card-body text-center">
                                 <div className="h1 mb-3">
@@ -53,11 +53,11 @@ export default function ShowCase() {
                                     About us
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere</p>
-                                <a className="btn-sm btn-primary" style={{textDecoration: 'none'}}>Learn more</a>
+                                <button className="btn-sm btn-primary" style={{textDecoration: 'none'}}>Learn more</button>
                             </div>
                         </div>
                     </div>
-                    <div className="col-sm">
+                    <div className="col-sm my-5">
                         <div className="card bg-light">
                             <div className="card-body text-center">
                                 <div className="h1 mb-3">
@@ -67,7 +67,7 @@ export default function ShowCase() {
                                     Need Help?
                                 </h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dictum, porttitor curae erat feugiat per duis id posuere</p>
-                                <a className="btn-sm btn-primary" style={{textDecoration: 'none'}}>Contact Us</a>
+                                <button className="btn-sm btn-primary" style={{textDecoration: 'none'}}>Contact Us</button>
                             </div>
                         </div>
                     </div>

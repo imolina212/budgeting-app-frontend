@@ -27,9 +27,9 @@ export default function TransactionDetails() {
                         <Button variant="primary">Back</Button>
                     </Link>
                     <div className="vr"></div>
-                    <Button variant="outline-primary">Edit</Button>
-                    <div className="vr"></div>
-                    <Button variant="outline-danger">Delete</Button>
+                    <Link to ={`/transactions/edit/${id}`}>
+                        <Button variant="outline-primary">Edit</Button>
+                    </Link>
                 </Stack>
             </div>
         </div>

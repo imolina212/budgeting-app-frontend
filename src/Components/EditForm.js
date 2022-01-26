@@ -35,7 +35,7 @@ export default function NewForm() {
 
   const handleDelete = () => {
     axios.delete(`${process.env.REACT_APP_API_URL}/transactions/${id}`)
-      .then((response) => {
+      .then(() => {
         navigate("/transactions")
       })
   } 
@@ -70,7 +70,7 @@ export default function NewForm() {
           />
           <input
             id="name"
-            class="mb-2"
+            className="mb-2"
             value={transaction.name}
             type="text"
             onChange={handleInput}
@@ -90,7 +90,7 @@ export default function NewForm() {
             <option value="Healthcare">Healthcare</option>
             <option value="Miscellaneous">Miscellaneous</option>
           </select>
-          <textarea class="form-control rounded-0" id="" rows="3" placeholder="Description (optional)"></textarea>
+          <textarea className="form-control rounded-0" id="" rows="3" placeholder="Description (optional)"></textarea>
       </Stack>
       <Stack direction="horizontal" className="my-5" gap="3">
         <Link to={`/transactions/${id}`}>
