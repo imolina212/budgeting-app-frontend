@@ -17,22 +17,22 @@ export default function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarMenu">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link to='/' className="nav-link" style={{textDecoration: 'none'}}>
+                            <Link to='/' className="nav-link" data-bs-toggle="collapse" style={{textDecoration: 'none'}}>
                                 Overview
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/transactions/new' className="nav-link" style={{textDecoration: 'none'}}>
+                            <Link to='/transactions/new' className="nav-link" data-bs-toggle="collapse" style={{textDecoration: 'none'}}>
                                 New Transaction
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/transactions' className="nav-link" style={{textDecoration: 'none'}}>
+                            <Link to='/transactions' className="nav-link" data-bs-toggle="collapse" style={{textDecoration: 'none'}}>
                                 View Transactions
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/transactions/budget' className="nav-link" style={{textDecoration: 'none'}}>
+                            <Link to='/transactions/budget' className="nav-link" data-bs-toggle="collapse" style={{textDecoration: 'none'}}>
                                 View Budgets
                             </Link>
                         </li>
